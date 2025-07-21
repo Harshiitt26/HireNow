@@ -2,7 +2,6 @@ import mongoose from "mongoose"
 
 const connectDB = async() => {
     const connectionInstance = await mongoose.connect(process.env.MONGODB_URI, {
-        DBname: "HireNow",
         serverSelectionTimeoutMS: 30000,
     })
     .then(()=>{
